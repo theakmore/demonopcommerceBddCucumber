@@ -1,0 +1,13 @@
+com\nopcommerce\testRunner\TestRunnerclass.class
+com\nopcommerce\stepDefinitions\Steps.class
+com\nopcommerce\pageObjects\LoginPage.class
+com\nopcommerce\pageObjects\AddManufacturerPage.class
+com\nopcommerce\pageObjects\SearchCustomerPage.class
+com\nopcommerce\pageObjects\AddProductPage.class
+com\nopcommerce\utilities\WaitHelper.class
+com\nopcommerce\pageObjects\AddCategoryPage.class
+com\nopcommerce\pageObjects\SearchProductPage.class
+com\nopcommerce\pageObjects\AddcustomerPage.class
+com\nopcommerce\pageObjects\SearchManufacturerPage.class
+com\nopcommerce\stepDefinitions\BaseClass.class
+com\nopcommerce\pageObjects\SearchCategoryPage.class

@@ -1,0 +1,1705 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Nopcommerce Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 3, 2022 02:08:29 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 3, 2022 02:08:29 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 3, 2022 02:18:05 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>4</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='20%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='80%'><b>4</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='41%'><b>5</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='58%'><b>7</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='75%'><b>105</b> steps passed</small></div>
+<div>
+<small data-tooltip='6%'><b>9</b> steps failed,
+<b>25</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Categories":73.09,"Customers":125.01,"Login":106.954,"Manufacturers":131.886,"Products":137.621
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>nopcommerce</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Akshay</td>
+</tr>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 4,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 5,
+failChild: 7,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 105,
+failGrandChild: 9,
+warningGrandChild: 0,
+skipGrandChild: 25,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Categories</p>
+            <p class="text-sm">
+              <span>2:08:30 AM</span> / <span>00:01:13:090</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Categories</h5>
+<span class='badge badge-success'>05.03.2022 2:08:30 AM</span>
+<span class='badge badge-danger'>05.03.2022 2:09:44 AM</span>
+<span class='badge badge-default'>00:01:13:090</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Add a New Category</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Email"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-2PSTLR1', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1bf98b70aac0a0b3dd72ff5d3f60dc79, findElement {using=id, value=Email}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:62688}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62688/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1bf98b70aac0a0b3dd72ff5d3f60dc79
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy26.clear(Unknown Source)
+	at com.nopcommerce.pageObjects.LoginPage.setUserName(LoginPage.java:38)
+	at com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(Steps.java:114)
+	at ?.User enters Email as "admin@yourstore.com" and Password as "admin"(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Categories.feature:6)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_catalog_menu()">
+                <span>When User click on catalog menu</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_categories()">
+                <span>And click on Categories</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_add_new_button()">
+                <span>And Click on Add New button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_add_new_category_page()">
+                <span>Then User can view add new Category page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enter_category_info()">
+                <span>When user enter category info</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_save_button()">
+                <span>And Click on Save button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_category_added_confirmation_message(java.lang.String)">
+                <span>Then User can view category added confirmation message "The new category has been added successfully."</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Add_a_New_Category
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded1.png' src="../screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="18"><span class="badge log fail-bg mr-2">Fail</span>Search Category by Name</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_catalog_menu()">
+                <span>When User click on catalog menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_categories()">
+                <span>And click on Categories</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.enter_category_name()">
+                <span>And Enter Category Name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_category_search_button()">
+                <span>When Click on Category Search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.nopcommerce.stepDefinitions.Steps.user_should_found_category_name_in_the_search_table()">
+                <span>Then User should found Category Name in the search table</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.nopcommerce.stepDefinitions.Steps.user_should_found_category_name_in_the_search_table(Steps.java:401)
+	at ?.User should found Category Name in the search table(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Categories.feature:27)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Search_Category_by_Name
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded2.png' src="../screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Customers</p>
+            <p class="text-sm">
+              <span>2:09:44 AM</span> / <span>00:02:05:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Customers</h5>
+<span class='badge badge-success'>05.03.2022 2:09:44 AM</span>
+<span class='badge badge-danger'>05.03.2022 2:11:49 AM</span>
+<span class='badge badge-default'>00:02:05:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>Add a New Customer</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_customers_menu()">
+                <span>When User click on customers Menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_customers_menu_item()">
+                <span>And Click on customers Menu Item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_add_new_button()">
+                <span>And Click on Add New button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_add_new_customer_page()">
+                <span>Then User can view Add New Customer Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enter_customer_info()">
+                <span>When User enter customer Info</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_save_button()">
+                <span>And Click on Save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_confirmation_message(java.lang.String)">
+                <span>Then User can view confirmation message "The new customer has been added successfully."</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="49"><span class="badge log pass-bg mr-2">Pass</span>Search Customer by EmailID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_customers_menu()">
+                <span>When User click on customers Menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_customers_menu_item()">
+                <span>And Click on customers Menu Item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.enter_customer_email()">
+                <span>And Enter Customer Email</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_search_button()">
+                <span>When Click on Search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_should_found_email_in_the_search_table()">
+                <span>Then User should found Email in the search table</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="63"><span class="badge log pass-bg mr-2">Pass</span>Search Customer by Name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_customers_menu()">
+                <span>When User click on customers Menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_customers_menu_item()">
+                <span>And Click on customers Menu Item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.enter_customer_first_name()">
+                <span>And Enter Customer FirstName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.enter_customer_last_name()">
+                <span>And Enter Customer LastName</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_search_button()">
+                <span>When Click on Search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_should_found_name_in_the_search_table()">
+                <span>Then User should found Name in the search table</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="78"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login</p>
+            <p class="text-sm">
+              <span>2:11:49 AM</span> / <span>00:01:46:954</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Login</h5>
+<span class='badge badge-success'>05.03.2022 2:11:49 AM</span>
+<span class='badge badge-danger'>05.03.2022 2:13:36 AM</span>
+<span class='badge badge-default'>00:01:46:954</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=78</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="79"><span class="badge log pass-bg mr-2">Pass</span>Successfull Login with Valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.page_title_should_be(java.lang.String)">
+                <span>Then page title should be "Dashboard / nopCommerce administration"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_logout_link()">
+                <span>When User click on Logout link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.page_title_should_be(java.lang.String)">
+                <span>Then page title should be "Your store. Login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="90"><span class="badge log fail-bg mr-2">Fail</span>Login Data Driven</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="91"><span class="badge log fail-bg mr-2">Fail</span>Login Data Driven</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Login</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then page title should be "Dashboard / nopCommerce administration"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When User click on Logout link</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : DataTables warning: table id=bestsellers-byamount-grid - Ajax error. For more information about this error, please see http://datatables.net/tn/7}
+  (Session info: chrome=100.0.4896.127): DataTables warning: table id=bestsellers-byamount-grid - Ajax error. For more information about this error, please see http://datatables.net/tn/7
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-2PSTLR1', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [98c9b9a9429d006a969e4b71593bd72f, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\WINDOWS\TEMP\scoped_dir8...}, goog:chromeOptions: {debuggerAddress: localhost:62818}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62818/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 98c9b9a9429d006a969e4b71593bd72f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy26.click(Unknown Source)
+	at com.nopcommerce.pageObjects.LoginPage.clickLogout(LoginPage.java:52)
+	at com.nopcommerce.stepDefinitions.Steps.user_click_on_logout_link(Steps.java:144)
+	at ?.User click on Logout link(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Login.feature:23)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then page title should be "Your store. Login"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And close browser</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Login_Data_Driven
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded3.png' src="../screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="102"><span class="badge log fail-bg mr-2">Fail</span>Login Data Driven</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters Email as "admin123@yourstore.com" and Password as "admin123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Login</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then page title should be "Dashboard / nopCommerce administration"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.nopcommerce.stepDefinitions.Steps.page_title_should_be(Steps.java:131)
+	at ?.page title should be "Dashboard / nopCommerce administration"(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Login.feature:22)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on Logout link</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then page title should be "Your store. Login"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And close browser</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-2PSTLR1', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [98638500821d5a64f5691b10a42eb425, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:62837}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62837/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 98638500821d5a64f5691b10a42eb425
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at com.nopcommerce.stepDefinitions.Steps.tearDown(Steps.java:89)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="113"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Manufacturers</p>
+            <p class="text-sm">
+              <span>2:13:36 AM</span> / <span>00:02:11:886</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Manufacturers</h5>
+<span class='badge badge-success'>05.03.2022 2:13:36 AM</span>
+<span class='badge badge-danger'>05.03.2022 2:15:48 AM</span>
+<span class='badge badge-default'>00:02:11:886</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=113</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="114"><span class="badge log pass-bg mr-2">Pass</span>Add a New Manufacturer</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_catalog_menu()">
+                <span>When User click on catalog menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_manufacturers()">
+                <span>And click on Manufacturers</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_add_new_button()">
+                <span>And Click on Add New button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_add_new_manufacturer_page()">
+                <span>Then User can view add new Manufacturer page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enter_manufacturer_info()">
+                <span>When user enter Manufacturer info</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_save_button()">
+                <span>And Click on Save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_manufacturer_added_confirmation_message(java.lang.String)">
+                <span>Then User can view Manufacturer added confirmation message "The new manufacturer has been added successfully."</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="130"><span class="badge log fail-bg mr-2">Fail</span>Search Manufacturer by Name</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_catalog_menu()">
+                <span>When User click on catalog menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_manufacturers()">
+                <span>And click on Manufacturers</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.nopcommerce.stepDefinitions.Steps.enter_manufacturer_name()">
+                <span>And Enter Manufacturer Name</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 40.000
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-2PSTLR1', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e38b1a67e6c3200a5580eb4256d3509b, findElement {using=xpath, value=//input[@id='SearchManufacturerName']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\WINDOWS\TEMP\scoped_dir7...}, goog:chromeOptions: {debuggerAddress: localhost:62875}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62875/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e38b1a67e6c3200a5580eb4256d3509b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy26.sendKeys(Unknown Source)
+	at com.nopcommerce.pageObjects.SearchManufacturerPage.enterManufacturerName(SearchManufacturerPage.java:45)
+	at com.nopcommerce.stepDefinitions.Steps.enter_manufacturer_name(Steps.java:440)
+	at ?.Enter Manufacturer Name(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Manufacturers.feature:25)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_manufacturer_search_button()">
+                <span>When Click on Manufacturer Search button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_should_found_manufacturer_name_in_the_search_table()">
+                <span>Then User should found Manufacturer Name in the search table</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 40.000
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-2PSTLR1', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e38b1a67e6c3200a5580eb4256d3509b, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\WINDOWS\TEMP\scoped_dir7...}, goog:chromeOptions: {debuggerAddress: localhost:62875}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62875/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e38b1a67e6c3200a5580eb4256d3509b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:626)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:351)
+	at com.nopcommerce.stepDefinitions.Steps.tearDown(Steps.java:89)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="144"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Products</p>
+            <p class="text-sm">
+              <span>2:15:48 AM</span> / <span>00:02:17:621</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Products</h5>
+<span class='badge badge-success'>05.03.2022 2:15:48 AM</span>
+<span class='badge badge-danger'>05.03.2022 2:18:05 AM</span>
+<span class='badge badge-default'>00:02:17:621</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=144</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="145"><span class="badge log fail-bg mr-2">Fail</span>Add a New Product</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_catalog_menu()">
+                <span>When User click on catalog menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_products()">
+                <span>And click on products</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_add_new_button()">
+                <span>And Click on Add New button</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : DataTables warning: table id=products-grid - Ajax error. For more information about this error, please see http://datatables.net/tn/7}
+  (Session info: chrome=100.0.4896.127): DataTables warning: table id=products-grid - Ajax error. For more information about this error, please see http://datatables.net/tn/7
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-2PSTLR1', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a015d751a6b4aaef1af13881b2ddf540, findElement {using=xpath, value=//a[@class='btn btn-primary']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\WINDOWS\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:62899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62899/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a015d751a6b4aaef1af13881b2ddf540
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at com.nopcommerce.pageObjects.AddcustomerPage.clickOnAddNew(AddcustomerPage.java:66)
+	at com.nopcommerce.stepDefinitions.Steps.click_on_add_new_button(Steps.java:184)
+	at ?.Click on Add New button(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Products.feature:13)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_add_new_product_page()">
+                <span>Then User can view add new product page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enter_product_info()">
+                <span>When user enter product info</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_save_button()">
+                <span>And Click on Save button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_product_added_confirmation_message(java.lang.String)">
+                <span>Then User can view product added confirmation message "The new product has been added successfully."</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Add_a_New_Product
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded4.png' src="../screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="161"><span class="badge log fail-bg mr-2">Fail</span>Search Product by Name</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_launch_chrome_browser()">
+                <span>Given User launch chrome browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_opens_url(java.lang.String)">
+                <span>When User opens URL "https://admin-demo.nopcommerce.com/login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_login()">
+                <span>And Click on Login</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_can_view_dashboard()">
+                <span>Then User can view Dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.user_click_on_catalog_menu()">
+                <span>When User click on catalog menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_products()">
+                <span>And click on products</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.enter_product_name()">
+                <span>And Enter Product Name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.nopcommerce.stepDefinitions.Steps.click_on_product_search_button()">
+                <span>When Click on Product Search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.nopcommerce.stepDefinitions.Steps.user_should_found_product_name_in_the_search_table()">
+                <span>Then User should found Product Name in the search table</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.nopcommerce.stepDefinitions.Steps.user_should_found_product_name_in_the_search_table(Steps.java:350)
+	at ?.User should found Product Name in the search table(file:///C:/Users/Akshay%20More/eclipse-workspace/demonopcommerceBddCucumber/./features/Products.feature:26)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.nopcommerce.stepDefinitions.Steps.close_browser()">
+                <span>And close browser</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Search_Product_by_Name
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded5.png' src="../screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:09:09 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>And User enters Email as "admin@yourstore.com" and Password as "admin"</a>
+<div class="">
+<span class="badge badge-default">Categories.Add a New Category.And User enters Email as "admin@yourstore.com" and Password as "admin"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchSessionException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchSessionException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:13:36 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='112'>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Login.Login Data Driven.com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.UnhandledAlertException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.UnhandledAlertException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:13:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='98'>When User click on Logout link</a>
+<div class="">
+<span class="badge badge-default">Login.Login Data Driven.When User click on Logout link</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:17:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='144' id='154'>And Click on Add New button</a>
+<div class="">
+<span class="badge badge-default">Products.Add a New Product.And Click on Add New button</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:14:27 AM</td>
+<td>
+<a href="#" class="linked" test-id='113' id='139'>And Enter Manufacturer Name</a>
+<div class="">
+<span class="badge badge-default">Manufacturers.Search Manufacturer by Name.And Enter Manufacturer Name</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:15:07 AM</td>
+<td>
+<a href="#" class="linked" test-id='113' id='143'>com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Manufacturers.Search Manufacturer by Name.com.nopcommerce.stepDefinitions.Steps.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:09:43 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Then User should found Category Name in the search table</a>
+<div class="">
+<span class="badge badge-default">Categories.Search Category by Name.Then User should found Category Name in the search table</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:13:35 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='108'>Then page title should be "Dashboard / nopCommerce administration"</a>
+<div class="">
+<span class="badge badge-default">Login.Login Data Driven.Then page title should be "Dashboard / nopCommerce administration"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:18:05 AM</td>
+<td>
+<a href="#" class="linked" test-id='144' id='172'>Then User should found Product Name in the search table</a>
+<div class="">
+<span class="badge badge-default">Products.Search Product by Name.Then User should found Product Name in the search table</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
